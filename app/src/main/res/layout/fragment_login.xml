@@ -3,9 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
     android:background="#F7F4EB"
+    android:padding="30dp"
     tools:context=".ui.fragments.LoginFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -54,12 +65,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/glBottom"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleLF"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".85">
+        app:layout_constraintVertical_bias=".85"
+        tools:layout_editor_absoluteX="30dp">
 
 
         <LinearLayout
