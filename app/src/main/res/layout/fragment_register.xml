@@ -1,69 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
     android:background="#F7F4EB"
-    tools:context=".ui.fragments.LoginFragment">
+    android:padding="@dimen/_10dp"
+    tools:context=".ui.fragments.RegisterFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glTop"
+        android:id="@+id/glTopRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".2" />
+        app:layout_constraintGuide_percent=".17" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glBottom"
+        android:id="@+id/glBottomRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".7" />
+        app:layout_constraintGuide_percent=".75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glMiddle"
+        android:id="@+id/glMiddleRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".5" />
 
-    <!-- <TextView
-         android:id="@+id/tvTitleLF"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="@dimen/_100dp"
-         android:fontFamily="@font/poppins_thin"
-         android:text="Buy Now"
-         android:textColor="#1B2946"
-         android:textSize="40sp"
-         android:textStyle="bold"
-         app:layout_constraintBottom_toTopOf="@id/glTop"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent" />
- -->
-
-    <ImageView
-        android:id="@+id/tvTitleLF"
-        android:layout_width="200dp"
-        android:layout_height="@dimen/_50dp"
-        android:src="@drawable/title"
-        app:layout_constraintBottom_toTopOf="@id/glTop"
+    <TextView
+        android:id="@+id/tvTitleRF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_thin"
+        android:text="Register here"
+        android:textColor="#1B2946"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/glTopRF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/glBottom"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleLF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".85">
-
+        app:layout_constraintBottom_toTopOf="@id/glBottomRF"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleRF"
+        app:layout_constraintVertical_bias=".5">
 
         <LinearLayout
-            android:id="@+id/llEmail"
+            android:id="@+id/llFullName"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/custom_background"
@@ -75,11 +63,40 @@
                 android:layout_height="@dimen/_25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_15dp"
+                android:src="@drawable/profile"
+                app:tint="#D99685" />
+
+            <EditText
+                android:id="@+id/etFullNameRF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/custom_edit_text_design"
+                android:hint="Full name"
+                android:padding="6dp"
+                android:textSize="@dimen/_15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/_6dp"
+            android:background="@drawable/custom_background"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/llFullName">
+
+            <ImageView
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_25dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15dp"
                 android:src="@drawable/mail"
                 app:tint="#D99685" />
 
             <EditText
-                android:id="@+id/etEmailLF"
+                android:id="@+id/etEmailRF"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -94,7 +111,7 @@
             android:id="@+id/llPassword"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_6dp"
             android:background="@drawable/custom_background"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/llEmail">
@@ -108,7 +125,7 @@
                 app:tint="#D99685" />
 
             <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/etPasswordRF"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -119,53 +136,68 @@
                 android:textSize="@dimen/_15sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/llConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/_6dp"
+            android:background="@drawable/custom_background"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/llPassword">
 
-        <TextView
-            android:id="@+id/tvForgotPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="5dp"
-            android:text="Forgot Password ?"
-            android:textColor="#FD8D79"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/llPassword"
-            app:layout_constraintTop_toBottomOf="@+id/llPassword" />
+            <ImageView
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_25dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15dp"
+                android:src="@drawable/lock"
+                app:tint="#D99685" />
+
+            <EditText
+                android:id="@+id/etConfirmPasswordRF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/custom_edit_text_design"
+                android:hint="Confirm password"
+                android:padding="6dp"
+                android:textSize="@dimen/_15sp" />
+        </LinearLayout>
+
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegisterRF"
             android:layout_width="0dp"
             android:layout_height="@dimen/_50dp"
-            android:layout_marginTop="@dimen/_25dp"
+            android:layout_marginTop="@dimen/_30dp"
             android:backgroundTint="#FA4A18"
             android:fontFamily="@font/poppins_thin"
-            android:text="Login"
+            android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_16sp"
             android:textStyle="bold"
             app:cornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/tvForgotPass"
-            app:layout_constraintStart_toStartOf="@+id/tvForgotPass"
-            app:layout_constraintTop_toBottomOf="@+id/tvForgotPass" />
+            app:layout_constraintEnd_toEndOf="@+id/llConfirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/llConfirmPassword" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tvOR"
+        android:id="@+id/tvORRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OR"
         android:textSize="@dimen/_20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/glBottom" />
+        app:layout_constraintTop_toBottomOf="@+id/glBottomRF" />
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/ivFacebook"
+        android:id="@+id/ivFacebookRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20dp"
@@ -174,8 +206,8 @@
         app:cardCornerRadius="@dimen/_50dp"
         app:cardElevation="0dp"
         app:contentPadding="10dp"
-        app:layout_constraintEnd_toStartOf="@id/glMiddle"
-        app:layout_constraintTop_toBottomOf="@+id/tvOR">
+        app:layout_constraintEnd_toStartOf="@id/glMiddleRF"
+        app:layout_constraintTop_toBottomOf="@+id/tvORRF">
 
         <ImageView
             android:layout_width="@dimen/_40dp"
@@ -187,7 +219,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/ivGoogle"
+        android:id="@+id/ivGoogleRF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10dp"
@@ -195,8 +227,8 @@
         app:cardCornerRadius="@dimen/_50dp"
         app:cardElevation="0dp"
         app:contentPadding="10dp"
-        app:layout_constraintStart_toEndOf="@id/glMiddle"
-        app:layout_constraintTop_toTopOf="@+id/ivFacebook">
+        app:layout_constraintStart_toEndOf="@id/glMiddleRF"
+        app:layout_constraintTop_toTopOf="@+id/ivFacebookRF">
 
         <ImageView
             android:layout_width="@dimen/_40dp"
@@ -213,24 +245,24 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivGoogle">
+        app:layout_constraintTop_toBottomOf="@+id/ivGoogleRF">
 
         <TextView
-            android:id="@+id/tvHaveAnyAccount"
+            android:id="@+id/tvHaveAnyAccountRF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Don't have an account?"
+            android:text="Already have an account?"
             android:textColor="#736A6A"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tvRegisterLF"
+            android:id="@+id/tvLoginRF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_thin"
             android:padding="5dp"
-            android:text="Register"
+            android:text="Login"
             android:textColor="#FD8D79"
             android:textSize="12sp"
             android:textStyle="bold" />
