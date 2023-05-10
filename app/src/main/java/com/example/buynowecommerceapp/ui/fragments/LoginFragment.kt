@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import com.example.buynowecommerceapp.R
 import com.example.buynowecommerceapp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +30,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.btnLogin.setOnClickListener {
-            userLogin()
+            //userLogin()
+            Navigation.findNavController(requireView()).navigate(R.id.homeFragment)
 
         }
     }
@@ -66,6 +69,7 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
 
             if (it.isSuccessful) {
+
                 Toast.makeText(requireContext(), "Successfully Login", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireContext(), "Login failed", Toast.LENGTH_SHORT).show()

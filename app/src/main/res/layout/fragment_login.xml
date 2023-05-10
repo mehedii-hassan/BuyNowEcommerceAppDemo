@@ -65,7 +65,7 @@
         <ImageView
             android:id="@+id/tvTitleLF"
             android:layout_width="200dp"
-            android:layout_height="@dimen/_50dp"
+            android:layout_height="@dimen/_50sdp"
             android:src="@drawable/title"
             app:layout_constraintBottom_toTopOf="@id/glTop"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,10 +91,10 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/mail"
                     app:tint="#D99685" />
 
@@ -107,23 +107,23 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Email"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llPassword"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="@drawable/custom_background"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/llEmail">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/lock"
                     app:tint="#D99685" />
 
@@ -136,7 +136,7 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Password"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
 
@@ -156,14 +156,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_50dp"
-                android:layout_marginTop="@dimen/_25dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:backgroundTint="#FA4A18"
                 android:fontFamily="@font/poppins_thin"
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
                 app:cornerRadius="50dp"
                 app:layout_constraintEnd_toEndOf="@+id/tvForgotPass"
@@ -178,7 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OR"
-            android:textSize="@dimen/_20sp"
+            android:textSize="@dimen/_20ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/glBottom" />
@@ -188,18 +188,18 @@
             android:id="@+id/ivFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20dp"
-            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:src="@drawable/facebook"
-            app:cardCornerRadius="@dimen/_50dp"
+            app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp"
             app:contentPadding="10dp"
             app:layout_constraintEnd_toStartOf="@id/glMiddle"
             app:layout_constraintTop_toBottomOf="@+id/tvOR">
 
             <ImageView
-                android:layout_width="@dimen/_40dp"
-                android:layout_height="@dimen/_40dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/facebook" />
 
 
@@ -210,17 +210,17 @@
             android:id="@+id/ivGoogle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:src="@drawable/google"
-            app:cardCornerRadius="@dimen/_50dp"
+            app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp"
             app:contentPadding="10dp"
             app:layout_constraintStart_toEndOf="@id/glMiddle"
             app:layout_constraintTop_toTopOf="@+id/ivFacebook">
 
             <ImageView
-                android:layout_width="@dimen/_40dp"
-                android:layout_height="@dimen/_40dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/google" />
 
         </androidx.cardview.widget.CardView>
@@ -229,7 +229,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F7F4EB"
-        android:padding="@dimen/_10dp"
+        android:padding="@dimen/_10sdp"
         tools:context=".ui.fragments.RegisterFragment">
 
 
@@ -75,10 +75,10 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/profile"
                     app:tint="#D99685" />
 
@@ -91,23 +91,23 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Full name"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llEmail"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="@dimen/_6dp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/custom_background"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/llFullName">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/mail"
                     app:tint="#D99685" />
 
@@ -120,23 +120,23 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Email"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llPassword"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="@dimen/_6dp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/custom_background"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/llEmail">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/lock"
                     app:tint="#D99685" />
 
@@ -149,23 +149,23 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Password"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="@dimen/_6dp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/custom_background"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/llPassword">
 
                 <ImageView
-                    android:layout_width="@dimen/_25dp"
-                    android:layout_height="@dimen/_25dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:src="@drawable/lock"
                     app:tint="#D99685" />
 
@@ -178,21 +178,21 @@
                     android:background="@drawable/custom_edit_text_design"
                     android:hint="Confirm password"
                     android:padding="6dp"
-                    android:textSize="@dimen/_15sp" />
+                    android:textSize="@dimen/_15ssp" />
             </LinearLayout>
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegisterRF"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_50dp"
-                android:layout_marginTop="@dimen/_30dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:backgroundTint="#FA4A18"
                 android:fontFamily="@font/poppins_thin"
                 android:text="Register"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
                 app:cornerRadius="50dp"
                 app:layout_constraintEnd_toEndOf="@+id/llConfirmPassword"
@@ -206,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OR"
-            android:textSize="@dimen/_20sp"
+            android:textSize="@dimen/_20ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/glBottomRF" />
@@ -216,18 +216,18 @@
             android:id="@+id/ivFacebookRF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20dp"
-            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:src="@drawable/facebook"
-            app:cardCornerRadius="@dimen/_50dp"
+            app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp"
             app:contentPadding="10dp"
             app:layout_constraintEnd_toStartOf="@id/glMiddleRF"
             app:layout_constraintTop_toBottomOf="@+id/tvORRF">
 
             <ImageView
-                android:layout_width="@dimen/_40dp"
-                android:layout_height="@dimen/_40dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/facebook" />
 
 
@@ -238,17 +238,17 @@
             android:id="@+id/ivGoogleRF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:src="@drawable/google"
-            app:cardCornerRadius="@dimen/_50dp"
+            app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp"
             app:contentPadding="10dp"
             app:layout_constraintStart_toEndOf="@id/glMiddleRF"
             app:layout_constraintTop_toTopOf="@+id/ivFacebookRF">
 
             <ImageView
-                android:layout_width="@dimen/_40dp"
-                android:layout_height="@dimen/_40dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/google" />
 
         </androidx.cardview.widget.CardView>
@@ -257,7 +257,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
