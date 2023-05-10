@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.buynowecommerceapp.R
 import com.example.buynowecommerceapp.adapters.CategoryAdapter
+import com.example.buynowecommerceapp.adapters.ProductAdapter
 import com.example.buynowecommerceapp.databinding.FragmentHomeBinding
 
 
@@ -25,8 +26,20 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-       // val categoryImageList = resources.getIntArray(R.array.CategoryImageList)
+        // val categoryImageList = resources.getIntArray(R.array.CategoryImageList)
         val categoryNameList = resources.getStringArray(R.array.CategoryNameList)
+
+        val productList = ArrayList<Int>()
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
+        productList.add(R.drawable.bn)
 
         val list = ArrayList<Int>()
         list.add(R.drawable.bird3)
@@ -39,8 +52,13 @@ class HomeFragment : Fragment() {
 
         val adapter = CategoryAdapter(list, categoryNameList)
         binding.rvCategory.layoutManager =
-            LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL,false)
+            LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvCategory.adapter = adapter
+
+        val productAdapter = ProductAdapter(productList)
+        binding.rvProduct.layoutManager =
+            LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvProduct.adapter = productAdapter
 
 
     }

@@ -77,6 +77,8 @@
     <dimen name="_28ssp">28sp</dimen>
     <dimen name="_29ssp">29sp</dimen>
     <dimen name="_30ssp">30sp</dimen>
+    <dimen name="_180sdp">180dp</dimen>
+    <dimen name="_48sdp">48dp</dimen>
 
 
 </resources>
