@@ -3,7 +3,7 @@ package com.example.buynowecommerceapp.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.buynowecommerceapp.databinding.RvProdutItemDesignBinding
+import com.example.buynowecommerceapp.databinding.RvFeatureProductsItemDesignBinding
 
 class ProductAdapter(
     private val productImageList: ArrayList<Int>,
@@ -11,7 +11,7 @@ class ProductAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        val binding = RvProdutItemDesignBinding.inflate(
+        val binding = RvFeatureProductsItemDesignBinding.inflate(
             LayoutInflater
                 .from(parent.context), parent, false
         )
@@ -26,11 +26,11 @@ class ProductAdapter(
         holder.bind(position)
     }
 
-    inner class ProductViewHolder(private val binding: RvProdutItemDesignBinding) :
+    inner class ProductViewHolder(private val binding: RvFeatureProductsItemDesignBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(position: Int) {
-            binding.ivProductItem.setImageResource(productImageList[position])
+            binding.ivFeatureProductItem.setImageResource(productImageList[position])
         }
     }
 }

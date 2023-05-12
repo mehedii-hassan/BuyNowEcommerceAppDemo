@@ -7,68 +7,174 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F7F4EB"
         tools:context=".ui.fragments.HomeFragment">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clTopId"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTopId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/ivTitleHF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:padding="5dp"
+                    android:src="@drawable/title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivCartHF"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="5dp"
+                    android:src="@drawable/cart"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTitleHF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivTitleHF"
+                    app:tint="#FA4A18" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_search_24"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCartHF"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCartHF"
+                    app:layout_constraintTop_toTopOf="@id/ivCartHF"
+                    app:tint="#FA4A18" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/clTopId" />
 
 
             <ImageView
-                android:id="@+id/ivTitleHF"
+                android:id="@+id/ivBannerHF"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img2"
+                app:layout_constraintTop_toBottomOf="@id/rvCategory" />
+
+            <TextView
+                android:id="@+id/tvRecent"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="5dp"
-                android:src="@drawable/title"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Recent"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/ivBannerHF" />
 
-            <ImageView
-                android:id="@+id/ivCartHF"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:padding="5dp"
-                android:src="@drawable/cart"
-                app:layout_constraintBottom_toBottomOf="@id/ivTitleHF"
+            <TextView
+                android:id="@+id/tvRecentProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="Products"
+                android:textAllCaps="true"
+                android:textColor="@color/g_dark_blue"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecent" />
+
+            <TextView
+                android:id="@+id/tvRecentViewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="View all"
+                android:textColor="@color/g_dark_blue"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@id/tvRecentProducts"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/ivTitleHF"
-                app:tint="#FA4A18" />
+                app:layout_constraintTop_toTopOf="@+id/tvRecent" />
 
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:padding="5dp"
-                android:src="@drawable/baseline_search_24"
-                app:layout_constraintBottom_toBottomOf="@id/ivCartHF"
-                app:layout_constraintEnd_toStartOf="@+id/ivCartHF"
-                app:layout_constraintTop_toTopOf="@id/ivCartHF"
-                app:tint="#FA4A18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecentProducts" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShopNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/rvProduct" />
+
+
+            <!--Feature products-->
+            <TextView
+                android:id="@+id/tvFeature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="Feature"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvShopNow" />
+
+            <TextView
+                android:id="@+id/tvFeatureProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="Products"
+                android:textAllCaps="true"
+                android:textColor="@color/g_dark_blue"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFeature" />
+
+
+
+            <!--Feature products recycler view-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFeatureProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvFeatureProducts" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/clTopId" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProduct"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/rvCategory" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
