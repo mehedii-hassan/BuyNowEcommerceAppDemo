@@ -41,7 +41,9 @@
     <dimen name="_43sdp">43dp</dimen>
     <dimen name="_40ssp">40sp</dimen>
     <dimen name="_100sdp">100dp</dimen>
+    <dimen name="_150sdp">150dp</dimen>
     <dimen name="_60sdp">60dp</dimen>
+    <dimen name="_65sdp">65dp</dimen>
     <dimen name="_70sdp">70dp</dimen>
 
     //ssp

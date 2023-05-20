@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.buynowecommerceapp.R
 import com.example.buynowecommerceapp.adapters.CategoryAdapter
 import com.example.buynowecommerceapp.adapters.FeatureProductAdapter
@@ -34,6 +36,19 @@ class HomeFragment : Fragment() {
         val categoryNameList = resources.getStringArray(R.array.CategoryNameList)
 
 
+        //val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
+
+
+        val recentProductList = ArrayList<Int>()
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+        recentProductList.add(R.drawable.chair_one)
+
         val list = ArrayList<Int>()
         list.add(R.drawable.img1)
         list.add(R.drawable.img2)
@@ -46,19 +61,65 @@ class HomeFragment : Fragment() {
         list.add(R.drawable.img1)
         list.add(R.drawable.img2)
 
+
+        val categoryList = ArrayList<Int>()
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.sofa)
+        categoryList.add(R.drawable.baseline_more_horiz_24)
+
+
         val listOne = ArrayList<Int>()
         listOne.add(R.drawable.img1)
         listOne.add(R.drawable.img2)
         listOne.add(R.drawable.img1)
         listOne.add(R.drawable.img2)
 
+        val imageList = ArrayList<SlideModel>() // Create image list
 
-        val adapter = CategoryAdapter(list, categoryNameList)
+// imageList.add(SlideModel("String Url" or R.drawable)
+// imageList.add(SlideModel("String Url" or R.drawable, "title") You can add title
+
+        imageList.add(
+            SlideModel(
+                "https://bit.ly/2YoJ77H",
+                "The animal population decreased by 58 percent in 42 years."
+            )
+        )
+        imageList.add(
+            SlideModel(
+                "https://bit.ly/2BteuF2",
+                "Elephants and tigers may become extinct."
+            )
+        )
+        imageList.add(SlideModel("https://bit.ly/3fLJf72", "And people do that."))
+        binding.imageSliderHF.setImageList(imageList)
+
+
+// FIT, CENTER_CROP or CENTER_INSIDE
+
+        val imageListOne = ArrayList<SlideModel>() // Create image list
+
+
+        imageListOne.add(
+            SlideModel(R.drawable.img1, ScaleTypes.FIT) // for one image
+
+        )
+        // imageSlider . setImageList (imageList, ScaleTypes.FIT
+        binding.imageSliderHF.setImageList(imageList, ScaleTypes.FIT)
+
+        // for all images
+
+        val adapter = CategoryAdapter(categoryList, categoryNameList)
         binding.rvCategory.layoutManager =
             LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvCategory.adapter = adapter
 
-        val productAdapter = ProductAdapter(list)
+        val productAdapter = ProductAdapter(recentProductList)
         binding.rvProduct.layoutManager =
             LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvProduct.adapter = productAdapter

@@ -16,12 +16,13 @@
     </integer-array>
 
     <string-array name="CategoryNameList">
-        <item>Car</item>
-        <item>Car</item>
-        <item>Car</item>
-        <item>Car</item>
-        <item>Car</item>
-        <item>Car</item>
-        <item>Car</item>
+        <item>Sofa</item>
+        <item>Chair</item>
+        <item>Furniture</item>
+        <item>Cupboard</item>
+        <item>Table</item>
+        <item>Sofa</item>
+        <item>Accessories</item>
+        <item>More</item>
     </string-array>
 </resources>

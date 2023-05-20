@@ -8,26 +8,41 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/_170sdp"
-        android:layout_height="265dp"
+        android:layout_height="270dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_3sdp"
         android:background="#F7F4EB">
 
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".99" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".99" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glProductHeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".72" />
+            app:layout_constraintGuide_percent=".75" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glProductDescStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".67" />
+            app:layout_constraintGuide_percent=".70" />
 
 
         <androidx.cardview.widget.CardView
@@ -54,7 +69,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_margin="@dimen/_2sdp"
             app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="4dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,12 +77,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
                 android:background="@color/white"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_fav"
-                app:tint="@color/g_orange" />
+                app:tint="@color/g_dark_blue" />
 
         </androidx.cardview.widget.CardView>
 
@@ -75,8 +90,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
             app:cardCornerRadius="@dimen/_6sdp"
             app:cardElevation="4dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,10 +110,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_thin"
                     android:maxLines="1"
-                    android:text="Product Name"
-                    android:textSize="13sp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="Smart product view"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -106,21 +121,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_thin"
                     android:maxLines="1"
-                    android:text="Product Price"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textColor="@color/g_dark_blue"
+                    android:text="৳6000"
+                    android:textStyle="bold"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:textSize="@dimen/_14ssp" />
 
 
                 <RatingBar
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:numStars="5"
                     android:rating="5"
-                    android:scaleX=".5"
-                    android:scaleY=".5"
+                    android:scaleX=".9"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:scaleY=".9"
                     android:stepSize="0.1"
                     android:theme="@style/RatingBar" />
 
@@ -137,6 +155,25 @@
     android:max="5"/>-->
 
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:cardCornerRadius="@dimen/_50sdp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/glBottom"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@color/g_dark_blue"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/cart"
+                android:paddingBottom="@dimen/_3sdp"
+                app:tint="@color/white" />
+
         </androidx.cardview.widget.CardView>
 
 

@@ -9,13 +9,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_10sdp">
+        android:layout_marginStart="@dimen/_10sdp">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCategoryItem"
-            android:layout_width="@dimen/_60sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
             app:cardCornerRadius="@dimen/_50sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -24,9 +24,10 @@
                 android:id="@+id/ivCategoryItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/bird4"
+                android:padding="@dimen/_15sdp"
                 android:scaleType="centerCrop"
-                />
+                android:src="@drawable/sofa"
+                app:tint="@color/g_dark_blue" />
 
         </androidx.cardview.widget.CardView>
 
@@ -34,9 +35,10 @@
             android:id="@+id/tvCategoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/_2sdp"
-            android:text="Category"
-            android:textSize="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="accessories"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/cvCategoryItem"
             app:layout_constraintStart_toStartOf="@+id/cvCategoryItem"
             app:layout_constraintTop_toBottomOf="@+id/cvCategoryItem" />

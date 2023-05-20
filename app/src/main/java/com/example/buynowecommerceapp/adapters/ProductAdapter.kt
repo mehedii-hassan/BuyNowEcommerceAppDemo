@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.buynowecommerceapp.databinding.RvFeatureProductsItemDesignBinding
+import com.example.buynowecommerceapp.databinding.RvRecectProductsItemDesignBinding
 
 class ProductAdapter(
     private val productImageList: ArrayList<Int>,
@@ -11,7 +12,7 @@ class ProductAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        val binding = RvFeatureProductsItemDesignBinding.inflate(
+        val binding = RvRecectProductsItemDesignBinding.inflate(
             LayoutInflater
                 .from(parent.context), parent, false
         )
@@ -26,11 +27,11 @@ class ProductAdapter(
         holder.bind(position)
     }
 
-    inner class ProductViewHolder(private val binding: RvFeatureProductsItemDesignBinding) :
+    inner class ProductViewHolder(private val binding: RvRecectProductsItemDesignBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(position: Int) {
-            binding.ivFeatureProductItem.setImageResource(productImageList[position])
+            binding.ivFeatureProductItemRP.setImageResource(productImageList[position])
         }
     }
 }
